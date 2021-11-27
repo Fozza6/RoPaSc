@@ -1,0 +1,42 @@
+import random
+
+user_win = 0
+comp_win = 0
+options = ["rock", "paper", "scissors"] # options for the user and computer to pick from
+
+
+while True:
+    user_input = input("Type rock/paper/scissors or Q to Exit the game: ").lower()
+    if user_input == "q":
+        break
+
+    if user_input not in options:    # list of strings
+        continue
+    
+    random_num = random.randint(0, 2)
+    # Rock = 0, Paper = 1, Scissors = 2
+    computer_pick = options[random_num]
+    print("The Computer Picked", computer_pick + ".")
+
+    if user_input == "rock" and computer_pick == "scissors":
+        print("You won!")
+        user_win += 1 
+        continue
+
+    elif user_input == "paper" and computer_pick == "rock":
+        print("You won!")
+        user_win += 1 
+        continue
+
+    elif user_input == "scissors" and computer_pick == "paper":
+        print("You won!")
+        user_win += 1 
+        continue
+    else:
+        print("You lost")
+        comp_win +=1
+
+
+print("You have won", user_win, ".")
+print("The Computer has won", comp_win, ".")
+print("Thank you for Playing, Goodbye!")
