@@ -37,6 +37,6 @@ while True:
         comp_win +=1
 
 
-print("You have won", user_win, ".")
-print("The Computer has won", comp_win, ".")
+print("You have won", user_win, "rounds.")
+print("The Computer has won", comp_win, "rounds.")
 print("Thank you for Playing, Goodbye!")
